@@ -6,7 +6,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+'''
+sesuaikan semua element sesuai dengan elemen pada html target
+elemen dibawah ini hanyalah contoh kasus
+'''
 def check_in():
     driver.find_element(By.ID, "userId").send_keys(username)
     driver.find_element(By.ID, "userPassword").send_keys(password)
@@ -100,9 +103,10 @@ def check_out():
 schedule.every().day.at('23:29').do(check_in)
 schedule.every().day.at('23:30').do(check_out)
 
-username = "92201188"  # Isi usernamemu
-password = "92201188"  # isi passwordmu
+username = ""  # Isi usernamemu
+password = ""  # isi passwordmu
 
+#untuk lokasi tempat anda login
 Map_coordinates = dict({
     "latitude": -0.9560453472593481,
     "longitude": 122.793032100726,
@@ -118,7 +122,7 @@ chrome_options.add_experimental_option("prefs", {
 })
 driver = webdriver.Chrome(options=chrome_options)
 
-driver.get("https://ekin.banggaikab.go.id/")
+driver.get("")#isi dengan link
 
 while True:
     schedule.run_pending()
