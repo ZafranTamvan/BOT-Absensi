@@ -1,6 +1,3 @@
 # BOT-Absensi
-'''
-menggunakan selenium webdriver untuk automation
 
-
-'''
+# menggunakan selenium webdriver untuk automation
